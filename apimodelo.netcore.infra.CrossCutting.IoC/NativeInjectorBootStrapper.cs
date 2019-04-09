@@ -22,7 +22,7 @@ namespace apimodelo.netcore.infra.CrossCutting.IoC
             services.AddScoped<LivrosValidations>();
             #endregion
 
-            services.AddDbContext<Context>(o => o.UseSqlServer("Server=myServerAddress;Database=myDataBase;User Id=sa;Password=sa@12345;"));
+            services.AddDbContext<Context>(o => o.UseSqlServer("Server=localhost;Database=dbapimodelo;User Id=sa;Password=sa@12345;"));
         }
     }
 }

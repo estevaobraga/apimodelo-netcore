@@ -1,8 +1,8 @@
 version: '3'
 services:
-  sql-server:
+  sqlserver:
     image: microsoft/mssql-server-linux:latest
-    container-name: sql-server
+    container_name: SqlApiModelo
     restart: "always"
     ports:
       - "1433:1433"

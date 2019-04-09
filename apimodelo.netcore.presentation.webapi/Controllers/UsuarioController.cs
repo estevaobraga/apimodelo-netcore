@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace apimodelo.netcore.presentation.webapi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepository _usuario;
