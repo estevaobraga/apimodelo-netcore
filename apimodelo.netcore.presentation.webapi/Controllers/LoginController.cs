@@ -6,9 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using apimodelo.netcore.domain.domain.Models;
 using apimodelo.netcore.presentation.webapi.Models;
+using apimodelo.netcore.presentation.webapi.Swagger.Example;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Swashbuckle.AspNetCore.Examples;
 
 namespace apimodelo.netcore.presentation.webapi.Controllers
 {
@@ -27,13 +30,16 @@ namespace apimodelo.netcore.presentation.webapi.Controllers
         /// Gerar token para acesso as rotas protegidas
         /// </summary>
         [HttpPost]
-        public async Task<IActionResult> Post(Usuario usuario)
+        [SwaggerRequestExample(typeof(LoginViewModel), typeof(LoginViewModelEx))]
+        public async Task<IActionResult> Post([FromServices] IMapper _mapper, LoginViewModel login)
         {
+            var usuario = _mapper.Map<Usuario>(login);
+
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenConfigurations.Key));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] {
-                new Claim("Login", usuario.Login),
+                new Claim("Usuario", usuario.Login),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
