@@ -30,10 +30,10 @@ Documentação: _Swagger 4.0.1_
 usuário: sa  
 senha: sa@12345  
 
-crie a base de dados
+	- crie a base de dados  
 `create database dbapimodelo`   
 `use dbapimodelo`   
-rode o script.SQL
+	- rode o script.SQL
 
 - No Sql Server   
 
