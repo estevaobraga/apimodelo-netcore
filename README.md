@@ -37,16 +37,16 @@ senha: sa@12345
 
 - No Sql Server   
 
-Crie a base de dados e execute o script.SQL
-Depois configure usuário e senha em apimodelo.netcore.infra.CrossCutting.IoC/NativeInjectorBootStrapper.cs   
+	- Crie a base de dados e execute o script.SQL  
+	- Depois configure usuário e senha em: /apimodelo.netcore.infra.CrossCutting.IoC/NativeInjectorBootStrapper.cs   
 `"Server=myServerAddress;Database=DataBase;User Id=sa;Password=sa@12345;"`   
 
 #### Rodar projeto
 
-Pelo terminal /apimodelo.netcore.presentation.webapi
+- Pelo terminal /apimodelo.netcore.presentation.webapi  
 `dotnet run`
 
-Pelo Visual Studio:
+- Pelo Visual Studio:  
 Selecione a opção de execução pelo IIS Express
 
 ## Testar
