@@ -22,13 +22,13 @@ Documentação: _Swagger 4.0.1_
 
 #### Crie a base de dados
 - No Docker   
-- Iniciar container Sql Server   
+	- Iniciar container Sql Server   
 `docker-compose up`   
-- Criar base de dados   
+	- Criar base de dados   
 `docker exec -it mongo-atm bash -c "sqlserver create database"`   
-- Acesse a base de dados
-usuário: sa
-senha: sa@12345
+	- Acesse a base de dados  
+usuário: sa  
+senha: sa@12345  
 
 crie a base de dados
 `create database dbapimodelo`   
