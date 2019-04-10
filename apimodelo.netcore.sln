@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3730A39E-38FE-48C7-BF4F-F879F6371347}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+		script.SQL = script.SQL
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{BAFAB76B-651F-4854-B746-F7830077627B}"
@@ -22,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E71D3AF2-0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apimodelo.netcore.infra.CrossCutting.IoC", "apimodelo.netcore.infra.CrossCutting.IoC\apimodelo.netcore.infra.CrossCutting.IoC.csproj", "{84B54589-7A9F-4EA5-9E20-38065E058929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apimodelo.netcore.infra.Data.MSSQL", "apimodelo.netcore.infra.Data.MSSQL\apimodelo.netcore.infra.Data.MSSQL.csproj", "{42411EFD-14C6-48D0-8E23-C2B71D89F409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apimodelo.netcore.infra.Data.MSSQL", "apimodelo.netcore.infra.Data.MSSQL\apimodelo.netcore.infra.Data.MSSQL.csproj", "{42411EFD-14C6-48D0-8E23-C2B71D89F409}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apimodelo.netcore.presentation.webapi", "apimodelo.netcore.presentation.webapi\apimodelo.netcore.presentation.webapi.csproj", "{981614B2-24B1-4CAA-B3CA-70653B58B306}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apimodelo.netcore.presentation.webapi", "apimodelo.netcore.presentation.webapi\apimodelo.netcore.presentation.webapi.csproj", "{981614B2-24B1-4CAA-B3CA-70653B58B306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>apimodelo.netcore.presentation.webapi</name>
+    </assembly>
+    <members>
+        <member name="M:apimodelo.netcore.presentation.webapi.Controllers.LoginController.Post(apimodelo.netcore.domain.domain.Models.Usuario)">
+            <summary>
+            Gerar token para acesso as rotas protegidas
+            </summary>
+        </member>
+        <member name="M:apimodelo.netcore.presentation.webapi.Controllers.LoginController.Get">
+            <summary>
+            Teste do token
+            </summary>
+        </member>
+        <member name="M:apimodelo.netcore.presentation.webapi.Controllers.UsuarioController.Get">
+            <summary>
+            Carregar todos os usuarios
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:apimodelo.netcore.presentation.webapi.Controllers.UsuarioController.Post(apimodelo.netcore.domain.domain.Models.Usuario)">
+            <summary>
+            Criar um novo usuario
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:apimodelo.netcore.presentation.webapi.Controllers.UsuarioController.Put(apimodelo.netcore.domain.domain.Models.Usuario)">
+            <summary>
+            Atualizar um usuario
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:apimodelo.netcore.presentation.webapi.Controllers.UsuarioController.Delete(apimodelo.netcore.domain.domain.Models.Usuario)">
+            <summary>
+            Deletar um usuario
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="T:apimodelo.netcore.presentation.webapi.Swagger.SwaggerProducesAttribute">
+            <summary>
+            SwaggerResponseContentTypeAttribute
+            </summary>
+        </member>
+    </members>
+</doc>
