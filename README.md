@@ -55,3 +55,9 @@ Acesse a URL /swagger do projeto para visualizar a documentação e realizar as 
 Criar novo usuário
 Método POST para a rota /api/usuario
 ![Alt Text](/docs/usuario-POST.PNG)
+
+Rotas do usuário
+![Alt Text](/docs/Usuario-swagger.PNG)
+
+Rotas da entidade livro
+![Alt Text](/docs/livro-swagger.PNG)
