@@ -50,14 +50,40 @@ senha: sa@12345
 Selecione a opção de execução pelo IIS Express
 
 ## Testar
-Acesse a URL /swagger do projeto para visualizar a documentação e realizar as chamadas a API
+Acesse a URL /swagger do projeto para visualizar a documentação e realizar as chamadas a API  
 
-Criar novo usuário
-Método POST para a rota /api/usuario
-![Alt Text](/docs/usuario-POST.PNG)
+Criar novo usuário  
+Método POST para a rota /api/usuario  
+![Alt Text](/docs/usuario-POST.PNG)  
 
-Rotas do usuário
-![Alt Text](/docs/Usuario-swagger.PNG)
+Realizar login  
+![Alt Text](/docs/Login1-swagger.PNG)  
+Token  
+![Alt Text](/docs/Login2-swagger.PNG)  
 
-Rotas da entidade livro
-![Alt Text](/docs/livro-swagger.PNG)
+Acessar rotas protegidas  
+![Alt Text](/docs/Login5-swagger.PNG)  
+
+Rotas do usuário  
+![Alt Text](/docs/Usuario-swagger.PNG)  
+
+Rotas da entidade livro  
+![Alt Text](/docs/livro-swagger.PNG)  
+
+## Melhorias em construção:  
+- Reduzir o retorno do fluent validate em caso de erro
+```
+{
+	[
+		"propertyName": "Nome",
+		"errorMessage": "Preencha o campo Nome"
+	],
+	[
+		...
+	]
+}
+```
+
+- Criptografar a senha do usuário  
+
+- Endereço, usuário e senha da base de dados variável em arquivo de configuração  (appsettings)
