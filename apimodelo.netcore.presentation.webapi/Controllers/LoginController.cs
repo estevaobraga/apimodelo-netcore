@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using apimodelo.netcore.domain.domain.Models;
+using apimodelo.netcore.domain.domain.Validations;
 using apimodelo.netcore.presentation.webapi.Models;
 using apimodelo.netcore.presentation.webapi.Swagger.Example;
 using AutoMapper;
@@ -31,10 +32,16 @@ namespace apimodelo.netcore.presentation.webapi.Controllers
         /// </summary>
         [HttpPost]
         [SwaggerRequestExample(typeof(LoginViewModel), typeof(LoginViewModelEx))]
-        public async Task<IActionResult> Post([FromServices] IMapper _mapper, LoginViewModel login)
+        public async Task<IActionResult> Post([FromServices] IMapper _mapper, [FromServices] LoginValidations validation, LoginViewModel login)
         {
             var usuario = _mapper.Map<Usuario>(login);
 
+            //Valida usuario na base
+            var entrar = await validation.ValidateAsync(usuario);
+            if (!entrar.IsValid)
+                return BadRequest(entrar);
+
+            //Gera o token
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenConfigurations.Key));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
@@ -53,7 +60,7 @@ namespace apimodelo.netcore.presentation.webapi.Controllers
         }
 
         /// <summary>
-        /// Teste do token
+        /// Rota para teste do token
         /// </summary>
         [HttpGet]
         [Authorize]

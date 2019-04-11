@@ -9,8 +9,8 @@ namespace apimodelo.netcore.presentation.webapi.Swagger.Example
         {
             return new LoginViewModel
             {
-                usuario = "estevaobraga",
-                senha = "123456"
+                Login = "estevaobraga",
+                Senha = "123456"
             };
         }
     }

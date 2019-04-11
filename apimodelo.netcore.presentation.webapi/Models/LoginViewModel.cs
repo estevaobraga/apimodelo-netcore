@@ -7,7 +7,7 @@ namespace apimodelo.netcore.presentation.webapi.Models
 {
     public class LoginViewModel
     {
-        public string usuario { get; set; }
-        public string senha { get; set; }
+        public string Login { get; set; }
+        public string Senha { get; set; }
     }
 }

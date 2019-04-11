@@ -1,6 +1,7 @@
 ﻿using apimodelo.netcore.infra.CrossCutting.IoC;
 using apimodelo.netcore.presentation.webapi.Models;
 using apimodelo.netcore.presentation.webapi.Swagger;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -86,6 +87,9 @@ namespace apimodelo.netcore.presentation.webapi
 
                 c.OperationFilter<ExamplesOperationFilter>();
             });
+
+            //Auto mapper
+            services.AddAutoMapper();
 
             //Injeções de dependencia 
             NativeInjectorBootStrapper.RegisterServices(services, Configuration);
